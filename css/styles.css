@@ -35,3 +35,52 @@ del {
 
 /* PivotTable */
 .pvtTotal, .pvtTotalLabel, .pvtGrandTotal {display: none}
+
+body {
+    background: #4d67c1;
+}
+
+.container {
+    background: white;
+}
+
+.jumbo-title {
+    display: block;
+    position: relative;
+    width: 75%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-container {
+    background: White;
+    color: #4d67c1;
+    font-size:1.5rem;
+    font-weight:400;
+}
+
+a:link {
+    color: #3c54aa;
+    font-weight: bold;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4d67c1;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #687dca;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #00ccff;
+    background-color: transparent;
+    text-decoration: underline;
+}

@@ -84,3 +84,75 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 }
+
+/* TILE CONTAINER STYLING */
+
+.rounded-corners {
+    border-radius: 25px;
+    border: 7.5px solid #4d67c1;
+    padding: 20px; 
+    width: 300px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row-container {
+    text-align: center;
+}
+
+.tile-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tile-container h3 {
+    color: #4d67c1;
+}
+
+/* .text-concat {
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.2em;
+    text-align:justify;
+  }
+  
+  .text.ellipsis::after {
+    content: "...";
+    position: absolute;
+    right: 10px; 
+    bottom: 54px;
+  } */
+
+.card-text-or {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 3em;      /* fallback */
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    min-height: 3em;
+}
+
+.card-view-button {
+    margin-top: 20px;
+}
+
+.card-container {
+    height: 400px;
+}
+
+.card-button {
+    border-color: #4d67c1;
+    color: #4d67c1;
+}
+
+.card-button:hover {
+    background: #4d67c1;
+    border-color: #4d67c1;
+}

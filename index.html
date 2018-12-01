@@ -14,9 +14,15 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Protirus</title>
+    <title>Protirus GitHub</title>
   </head>
   <body ng-app="myApp">
     <header>
@@ -40,26 +46,53 @@
     <!-- Begin page content -->
     <main role="main" class="container">
 
-        <div ng-controller="myController" data-ng-init="init()">
-
-            <div class="container">
-
-                <div ng-repeat="repo in repos" class="row">
-                    <a ng-href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
-                </div>
-                <!--Row [End]-->
-                
+        <section class="jumbotron title-container text-center">
+            <div>
+                <img class="jumbo-title" src="/assets/protirus-title-blue.svg" alt="Protirus Title Logo">
+                <br/>
+                <h1>Welcome to our GitHub site!</h1><p>For more information about us and what we do, please visit<br/><a href="https://protirus.com" target="_blank">www.protirus.com</a> </p>
             </div>
-            <!--Container [End]-->
-            
+        </section>
+
+        <div ng-controller="myController" data-ng-init="init()">
+            <div class="tile-container" style="margin-top: -50px;">
+                <div class="row">
+                    <div ng-repeat="repo in repos" class="col-md-6" style="margin-bottom: 50px;">
+                        <div class="card mb-6 box-shadow">
+                            <div class="card-img-container">
+                                <img class="card-img" ng-src="https://raw.githubusercontent.com/Protirus/{{repo.name}}/master/docs/github/repo-io-thumb.png" onerror="this.onerror=null;this.src='/assets/repo-placeholder.png';"/>
+                            </div>
+                            <div class="card-body">
+                            <h3>{{repo.name}}</h3>
+                            <div class="card-text-or">
+                                {{repo.description}}
+                            </div>
+                            <div class="d-flex justify-content-between card-view-button align-items-center">
+                                <div class="btn-group">
+                                    <button ng-click="OpenRepository($index)" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
+                                </div>
+                                    <div class="card-topics-container">
+                                        <div ng-repeat="topic in repo.topics">
+                                            <span class="badge badge-pill card-pill-primary" style="margin-left:5px;">{{topic}}</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
         </div>
+
+        <br/>
     </main>
     
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <span class="text-muted"><a href="https://www.protirus.com/" target="_blank">Protirus</a></span>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -68,6 +101,7 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script> -->
     <!-- <script src="js/script.js"></script> -->

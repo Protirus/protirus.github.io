@@ -57,8 +57,8 @@
 
         <div ng-controller="myController" data-ng-init="init()">
             <div class="tile-container" style="margin-top: -50px;">
-                <div data-ng-repeat="repo in repos" class="row" style="margin-bottom: 50px;">
-                    <div class="col-md-6">
+                <div class="row">
+                    <div data-ng-repeat="repo in repos" class="col-md-6" style="margin-bottom: 50px;">
                         <div class="card mb-6 box-shadow">
                             <div class="card-img-container">
                                 <img class="card-img" src="/assets/repo-placeholder.png"/>

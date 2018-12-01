@@ -55,79 +55,9 @@
             </div>
         </section>
 
-        <!-- <div class="tile-container">
-            <div class="row" style="margin-top: -50px;">
-                <div class="col-md-6 col-md-offset-6">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-img-container">
-                            <img class="card-img" src="/assets/test/bothlogos.png"/>
-                        </div>
-                        <div class="card-body">
-                        <h3>Tagger</h3>
-                        <div class="card-text-or">
-                            Tagger is DLP server flex response to allow ICT integration, Contact info@protirus.com for more details and a private demo. lets add more text until it spills over.
-                        </div>
-                        <div class="d-flex justify-content-between card-view-button align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
-                            </div>
-                            <small class="text-muted">ICT, DLP</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card mb-6 box-shadow">
-                        <div class="card-img-container">
-                            <img class="card-img" src="/assets/protirus-p-strokeglow.png"/>
-                        </div>
-                        <div class="card-body">
-                        <h3>patchautomation</h3>
-                        <div class="card-text-or">
-                            Patch Automation tool kit for Symantec Management Platform 7.1, 7.5 and 7.6
-                        </div>
-                        <div class="d-flex justify-content-between card-view-button align-items-center">
-                            <div class="btn-group">
-                                <button href="https://www.google.com" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
-                            </div>
-                            <small class="text-muted">SMP</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div ng-controller="myController" data-ng-init="init()">
-            <div class="tile-container">
-                <div ng-repeat="repo in repos" class="row" style="margin-top: -50px;">
-                    <div class="col-md-6 col-md-offset-6">
-                        <div class="card mb-6 box-shadow">
-                            <div class="card-img-container">
-                                <img class="card-img" src="/assets/repo-placeholder.png"/>
-                            </div>
-                            <div class="card-body">
-                            <h3>{{repo.name}}</h3>
-                            <div class="card-text-or">
-                                {{repo.description}}
-                            </div>
-                            <div class="d-flex justify-content-between card-view-button align-items-center">
-                                <div class="btn-group">
-                                    <button ng-href="https://www.google.com" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
-                                </div>
-                                <small class="text-muted">ICT, DLP</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>          
-        </div> -->
-
         <div ng-controller="myController" data-ng-init="init()">
             <div class="tile-container" style="margin-top: -50px;">
-                <div ng-repeat="repo in repos" class="row" style="margin-bottom: 50px;">
+                <div data-ng-repeat="repo in repos" class="row" style="margin-bottom: 50px;">
                     <div class="col-md-6">
                         <div class="card mb-6 box-shadow">
                             <div class="card-img-container">
@@ -140,7 +70,7 @@
                             </div>
                             <div class="d-flex justify-content-between card-view-button align-items-center">
                                 <div class="btn-group">
-                                    <button ng-href="https://www.google.com" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
+                                    <button ng-click="OpenRepository($index)" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
                                 </div>
                                 <small class="text-muted">ICT, DLP</small>
                                 </div>

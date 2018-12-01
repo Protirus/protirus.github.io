@@ -55,8 +55,8 @@
             </div>
         </section>
 
-        <div class="tile-container">
-            <div class="row" style="margin-top: -50px;"><!-- TODO remove inline style-->
+        <!-- <div class="tile-container">
+            <div class="row" style="margin-top: -50px;">
                 <div class="col-md-6 col-md-offset-6">
                     <div class="card mb-6 box-shadow">
                         <div class="card-img-container">
@@ -89,7 +89,7 @@
                         </div>
                         <div class="d-flex justify-content-between card-view-button align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
+                                <button href="https://www.google.com" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
                             </div>
                             <small class="text-muted">SMP</small>
                             </div>
@@ -97,26 +97,61 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-        
+        </div> -->
 
-        <br/><br/>
+        <!-- <div ng-controller="myController" data-ng-init="init()">
+            <div class="tile-container">
+                <div ng-repeat="repo in repos" class="row" style="margin-top: -50px;">
+                    <div class="col-md-6 col-md-offset-6">
+                        <div class="card mb-6 box-shadow">
+                            <div class="card-img-container">
+                                <img class="card-img" src="/assets/repo-placeholder.png"/>
+                            </div>
+                            <div class="card-body">
+                            <h3>{{repo.name}}</h3>
+                            <div class="card-text-or">
+                                {{repo.description}}
+                            </div>
+                            <div class="d-flex justify-content-between card-view-button align-items-center">
+                                <div class="btn-group">
+                                    <button ng-href="https://www.google.com" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
+                                </div>
+                                <small class="text-muted">ICT, DLP</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div> -->
 
         <div ng-controller="myController" data-ng-init="init()">
-
-            <div class="container">
-
-                <div ng-repeat="repo in repos" class="row">
-                    <a ng-href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
-                    <p>Test</p>
+            <div class="tile-container" style="margin-top: -50px;">
+                <div ng-repeat="repo in repos" class="row" style="margin-bottom: 50px;">
+                    <div class="col-md-6">
+                        <div class="card mb-6 box-shadow">
+                            <div class="card-img-container">
+                                <img class="card-img" src="/assets/repo-placeholder.png"/>
+                            </div>
+                            <div class="card-body">
+                            <h3>{{repo.name}}</h3>
+                            <div class="card-text-or">
+                                {{repo.description}}
+                            </div>
+                            <div class="d-flex justify-content-between card-view-button align-items-center">
+                                <div class="btn-group">
+                                    <button ng-href="https://www.google.com" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
+                                </div>
+                                <small class="text-muted">ICT, DLP</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--Row [End]-->
-                
-            </div>
-            <!--Container [End]-->
-            
+            </div>          
         </div>
+
+        <br/>
     </main>
     
     <!-- <footer class="footer">

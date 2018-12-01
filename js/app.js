@@ -10,8 +10,8 @@ myApp.controller('myController', function ($scope, $http) {
         url: 'https://api.github.com/orgs/protirus/repos',
         headers: {
           'Accept': 'application/vnd.github.mercy-preview+json'
+          }
         }
-}
 
     loadRepos = () => {
         $http(req)

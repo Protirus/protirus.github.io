@@ -72,7 +72,14 @@
                                 <div class="btn-group">
                                     <button ng-click="OpenRepository($index)" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
                                 </div>
-                                <small class="text-muted">ICT, DLP</small>
+                                <!-- <span class="badge badge-pill badge-primary">{{repo.topics}}</span> -->
+                                <!-- <small class="text-muted" >{{repo.topics}}</small> -->
+                                    <div class="card-topics-container">
+                                        <div ng-repeat="topic in repo.topics">
+                                            <span class="badge badge-pill card-pill-primary" style="margin-left:5px;">{{topic}}</span>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

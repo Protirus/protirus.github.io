@@ -85,7 +85,7 @@ a:active {
     text-decoration: underline;
 }
 
-/* TILE CONTAINER STYLING */
+/* REPO CARD STYLES */
 
 .rounded-corners {
     border-radius: 25px;
@@ -110,23 +110,6 @@ a:active {
 .tile-container h3 {
     color: #4d67c1;
 }
-
-/* .text-concat {
-    position: relative;
-    display: inline-block;
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 3.6em;
-    line-height: 1.2em;
-    text-align:justify;
-  }
-  
-  .text.ellipsis::after {
-    content: "...";
-    position: absolute;
-    right: 10px; 
-    bottom: 54px;
-  } */
 
 .card-text-or {
     overflow: hidden;

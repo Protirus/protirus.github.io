@@ -37,16 +37,16 @@ myApp.controller('myController', function ($scope, $http) {
         return sortedRepos;
     }
 
+    $scope.GetRepositoryImage = (index) => {
+
+        if (index < 0)
+        {
+            return 
+        }
+    }
+
     $scope.OpenRepository = (index) => {
         var repo = $scope.repos[index];
         window.open(repo.html_url);
     }
 });
-
-function compare(first, second) {
-    if (first.last_nom < second.last_nom)
-        return -1;
-    if (first.last_nom > second.last_nom)
-      return 1;
-   return 0;
-}

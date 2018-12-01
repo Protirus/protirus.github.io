@@ -50,7 +50,6 @@
             <div>
                 <img class="jumbo-title" src="/assets/protirus-title-blue.svg" alt="Protirus Title Logo">
                 <br/>
-                <!-- <p>Welcome to our GitHub site!<br/>For more information about us and what we do, please visit<br/><a href="https://protirus.com" target="_blank">www.protirus.com</a> </p> -->
                 <h1>Welcome to our GitHub site!</h1><p>For more information about us and what we do, please visit<br/><a href="https://protirus.com" target="_blank">www.protirus.com</a> </p>
             </div>
         </section>
@@ -58,10 +57,10 @@
         <div ng-controller="myController" data-ng-init="init()">
             <div class="tile-container" style="margin-top: -50px;">
                 <div class="row">
-                    <div data-ng-repeat="repo in repos" class="col-md-6" style="margin-bottom: 50px;">
+                    <div ng-repeat="repo in repos" class="col-md-6" style="margin-bottom: 50px;">
                         <div class="card mb-6 box-shadow">
                             <div class="card-img-container">
-                                <img class="card-img" src="/assets/repo-placeholder.png"/>
+                                <img class="card-img" ng-src="https://raw.githubusercontent.com/Protirus/{{repo.name}}/master/docs/github/repo-io-thumb.png" onerror="this.onerror=null;this.src='/assets/repo-placeholder.png';"/>
                             </div>
                             <div class="card-body">
                             <h3>{{repo.name}}</h3>
@@ -72,8 +71,6 @@
                                 <div class="btn-group">
                                     <button ng-click="OpenRepository($index)" type="button" class="btn btn-sm btn-outline-secondary card-button">View</button>
                                 </div>
-                                <!-- <span class="badge badge-pill badge-primary">{{repo.topics}}</span> -->
-                                <!-- <small class="text-muted" >{{repo.topics}}</small> -->
                                     <div class="card-topics-container">
                                         <div ng-repeat="topic in repo.topics">
                                             <span class="badge badge-pill card-pill-primary" style="margin-left:5px;">{{topic}}</span>

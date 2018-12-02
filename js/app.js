@@ -21,28 +21,15 @@ myApp.controller('myController', function ($scope, $http) {
     }
 
     sortRepos = (repos) => {
-        
-        var sortedRepos = [];
-        repos.forEach(element => {
 
-            if (element.name != "protirus.github.io") {
-                sortedRepos.push(element);
-            }
-        });
+        const index = repos.map(e => e.name).indexOf('protirus.github.io');
+        repos.splice(index, 1);
 
-        sortedRepos.sort(function(a, b) {
+        repos.sort(function(a, b) {
             return new Date(b.date) - new Date(a.date);
         }).reverse();
 
-        return sortedRepos;
-    }
-
-    $scope.GetRepositoryImage = (index) => {
-
-        if (index < 0)
-        {
-            return 
-        }
+        return repos;
     }
 
     $scope.OpenRepository = (index) => {

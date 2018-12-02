@@ -1,4 +1,4 @@
-![Protirus Github Banner](assets\readme\banner-image.png)
+![Protirus Github Banner](/assets/readme/banner-image.png)
 
 Welcome to the Protirus GitHub site!
 

@@ -129,3 +129,16 @@ a:active {
     color: #fff;
     background-color: #4d67c1;
 }
+
+/* Buttons */
+
+button {
+    background-color:#4d67c1;
+    color: #FFF;
+}
+
+/* Font Awesome */
+
+.fa-search {
+    color: white;
+}

@@ -32,8 +32,7 @@ myApp.controller('myController', function ($scope, $http) {
         return repos;
     }
 
-    $scope.OpenRepository = (index) => {
-        var repo = $scope.repos[index];
+    $scope.OpenRepository = (repo) => {
         window.open(repo.html_url);
     }
 });

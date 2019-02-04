@@ -1,38 +1,9 @@
-h3 {
-    color: #4d67c1
-}
-
-.match,
-.textdiff span {
-    color: gray;
-}
-
-.ins,
-ins {
-    color: black;
-    background: #bbffbb;
-}
-
-.del,
-del {
-    color: black;
-    background: #ffbbbb;
-}
-
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* PivotTable */
-.pvtTotal, .pvtTotalLabel, .pvtGrandTotal {display: none}
-
 body {
     background: #4d67c1;
+}
+
+h3 {
+    color: #4d67c1
 }
 
 .container {
@@ -161,4 +132,17 @@ a:active {
 .card-pill-primary {
     color: #fff;
     background-color: #4d67c1;
+}
+
+/* Buttons */
+
+button {
+    background-color:#4d67c1;
+    color: #FFF;
+}
+
+/* Font Awesome */
+
+.fa-search {
+    color: white;
 }

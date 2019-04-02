@@ -18,8 +18,8 @@
     border-radius: 50%;
     padding: 5px;
     background: #833ab4; 
-    background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); 
-    background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+    background: -webkit-linear-gradient(to bottom, #4466C7, #25c4ff); 
+    background: linear-gradient(to bottom, #4466C7, #25c4ff);
 }
 .image_inner_container img {
     height: 150px;

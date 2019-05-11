@@ -30,33 +30,54 @@
     <!-- Begin page content -->
     <main role="main" class="container">
 
-        <section class="jumbotron title-container text-center">
-            <div>
-                <img class="jumbo-title" src="/assets/protirus-title-blue.svg" alt="Protirus Title Logo">
-                <br/>
-                <h1>Welcome to our GitHub site!</h1><p>For more information about us and what we do, please visit<br/><a href="https://protirus.com" target="_blank">www.protirus.com</a></p>
-
-                <div class="row justify-content-md-center">
-                    <div class="col-lg-8">
-                        <div class="input-group">
-                            <input type="text" class="form-control" ng-model='searchText' placeholder="Search for a Repo ..." aria-label="Search">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
         <div ng-controller="myController" data-ng-init="init()">
             
-            <div class="tile-container" style="margin-top: -50px;">
+            <section class="jumbotron title-container text-center">
+                <div>
+                    <img class="jumbo-title" src="/assets/protirus-title-blue.svg" alt="Protirus Title Logo">
+                    <br/>
+                    <h1>Welcome to our GitHub site!</h1><p>For more information about us and what we do, please visit<br/><a href="https://protirus.com" target="_blank">www.protirus.com</a></p>
+
+                    <div class="row justify-content-md-center">
+                        <div class="col-lg-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" ng-model='searchText' placeholder="Search for a Repo ..." aria-label="Search">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="row justify-content-md-center" style="margin-bottom: 50px;">
+                <!-- <span class="badge badge-secondary" ng-repeat="topic in topics">{{topic}}</span> -->
+                <!-- <button ng-repeat="(topic, value) in topicOptions"
+                            class="btn btn-danger btn-sm text-bold margin-right-10"
+                            ng-click="$ctrl.toggleOptions(topicOptions, $event, topic)"
+                            ng-class="{'btn-grey': !topicOptions[topic]}">{{topic}}</button> -->
+                <div ng-repeat="topic in topics | orderBy:'name'">
+                    <input type="checkbox" ng-model="topicOptions[topic.name]"> {{topic.name}} &nbsp;
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center">
+                Order:
+                <div ng-repeat="order in orderOptions" class="col-md-3" style="margin-bottom: 50px;">
+                    {{order.name}}
+                    <a ng-click="setOrder(order.prop)">▲</a>
+                    <a ng-click="setOrder(-order.prop)">▼</a>
+                </div>
+            </div>
+
+            <div class="tile-container">
                 <div class="row">
-                    <div ng-repeat="repo in repos | filter:searchText" class="col-md-6" style="margin-bottom: 50px;">
+                        <!-- filter:filterRepos |  -->
+                    <div ng-repeat="repo in repos | filter:searchText | orderBy:orderProp | filter:filterRepos" class="col-md-6" style="margin-bottom: 50px;">
                         <div class="card mb-6 box-shadow">
                             <div class="card-img-container">
                                 <img class="card-img" ng-src="https://raw.githubusercontent.com/Protirus/{{repo.name}}/master/docs/github/repo-io-thumb.png" onerror="this.onerror=null;this.src='/assets/repo-placeholder.png';"/>
@@ -128,13 +149,14 @@
                         <div class="image_outer_container">
                             <!-- <div class="green_icon"></div> -->
                             <div class="image_inner_container">
-                                <!-- <a href="https://github.com/Axemasta" target="_blank" title="Ray O'Hare"> -->
+                                <a href="https://github.com/raytechpro" target="_blank" title="Ray O'Hare">
                                     <img src="https://www.fjords.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="Ray O'Hare Image">
-                                <!-- </a> -->
+                                </a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- https://github.com/raytechpro -->
                     <!-- https://www.linkedin.com/in/raymond-o-hare-8619b378/ -->
 
                 </div>

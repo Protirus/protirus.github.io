@@ -54,30 +54,30 @@
                 </div>
             </section>
 
-            <div class="row">
+            <div class="row justify-content-md-center" style="margin-bottom: 50px;">
                 <!-- <span class="badge badge-secondary" ng-repeat="topic in topics">{{topic}}</span> -->
                 <!-- <button ng-repeat="(topic, value) in topicOptions"
                             class="btn btn-danger btn-sm text-bold margin-right-10"
                             ng-click="$ctrl.toggleOptions(topicOptions, $event, topic)"
                             ng-class="{'btn-grey': !topicOptions[topic]}">{{topic}}</button> -->
-                <!-- <div ng-repeat = "topic in topics">
-                    <input type="checkbox" ng-model="topicOptions[topic.name]"> {{topic.name}}
-                </div> -->
+                <div ng-repeat="topic in topics | orderBy:'name'">
+                    <input type="checkbox" ng-model="topicOptions[topic.name]"> {{topic.name}} &nbsp;
+                </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-md-center">
                 Order:
-                <div ng-repeat = "order in orderOptions">
+                <div ng-repeat="order in orderOptions" class="col-md-3" style="margin-bottom: 50px;">
                     {{order.name}}
-                    <a ng-click="setOrder(order.name)">▲</a>
-                    <a ng-click="setOrder(-order.name)">▼</a>
+                    <a ng-click="setOrder(order.prop)">▲</a>
+                    <a ng-click="setOrder(-order.prop)">▼</a>
                 </div>
             </div>
 
             <div class="tile-container">
                 <div class="row">
                         <!-- filter:filterRepos |  -->
-                    <div ng-repeat="repo in repos | filter:searchText | orderBy:orderProp" class="col-md-6" style="margin-bottom: 50px;">
+                    <div ng-repeat="repo in repos | filter:searchText | orderBy:orderProp | filter:filterRepos" class="col-md-6" style="margin-bottom: 50px;">
                         <div class="card mb-6 box-shadow">
                             <div class="card-img-container">
                                 <img class="card-img" ng-src="https://raw.githubusercontent.com/Protirus/{{repo.name}}/master/docs/github/repo-io-thumb.png" onerror="this.onerror=null;this.src='/assets/repo-placeholder.png';"/>

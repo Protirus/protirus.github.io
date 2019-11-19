@@ -127,6 +127,7 @@ a:active {
 .card-topics-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .card-pill-primary {
